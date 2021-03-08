@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+.dev-label {
+  background-color: #c11b1f;
+  border-radius: 0 0 0 6px;
+  color: snow;
+  padding: 1px 2px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
