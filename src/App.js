@@ -1,3 +1,4 @@
+// Initializing Project
 import React from 'react';
 import './App.css';
 
