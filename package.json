@@ -19,7 +19,8 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cy": "cypress run",
-    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json ."
+    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
+    "dev": "nodemon index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
