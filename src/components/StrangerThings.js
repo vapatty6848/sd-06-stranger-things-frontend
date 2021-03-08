@@ -5,7 +5,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-const isInDevelopment = process.env.IN_DEVELOPMENT === 'true';
+const isInDevelopment = process.env.NODE_ENV === 'development';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
@@ -161,9 +161,9 @@ class StrangerThings extends React.Component {
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
+            { isInDevelopment && <p>Em desenvolvimento</p> }
           </div>
         </div>
-        { isInDevelopment && <p>Em desenvolvimento</p> }
       </div>
     );
   }
