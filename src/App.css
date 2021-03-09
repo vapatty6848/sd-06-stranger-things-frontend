@@ -99,3 +99,8 @@
   width: 900px;
   text-align: left;
 }
+
+.development-flag {
+  color:#c11b1f;
+  font-size: large;
+}
