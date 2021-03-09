@@ -5,7 +5,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-const isInDevelopment = process.env.DEVELOPMENT === 'true';
+const isInDevelopment = process.env.REACT_APP_DEVELOPMENT === 'true';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL,
