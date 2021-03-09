@@ -39,6 +39,10 @@ class StrangerThings extends React.Component {
     this.previousPage = this.previousPage.bind(this);
   }
 
+  componentDidMount() {
+    this.searchCharacter();
+  }
+
   handleInput(event) {
     this.setState({
       characterName: event.target.value,
@@ -72,6 +76,7 @@ class StrangerThings extends React.Component {
     service
       .getCharacters(characterName, pages || page, numberOfPages)
       .then(({ data: characters }) => {
+        console.log('data: ', characters);
         this.setState({
           characters,
         });
@@ -139,6 +144,7 @@ class StrangerThings extends React.Component {
                 </tr>
               </thead>
               <tbody>
+                {console.log(characters)}
                 {characters.map((char) => (
                   <tr key={ char.name }>
                     <td>{char.name}</td>
