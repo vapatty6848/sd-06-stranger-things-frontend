@@ -1,4 +1,5 @@
 import React from 'react';
+import dotenv from 'dotenv';
 import CharactersService from '../services/charactersAPI';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -10,9 +11,11 @@ const strangerThingsConfig = {
   timeout: 30000,
 };
 
+dotenv.config();
+
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.NODE_ENV.REACT_APP_UPSIDEDOWN_APP,
+  timeout: process.env.NODE_ENV.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -103,6 +106,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(process.env.REACT_APP_UPSIDEDOWN_TIMEOUT);
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
