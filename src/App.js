@@ -3,6 +3,7 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
+// para pushar
 function App() {
   return (
     <div className="App">
