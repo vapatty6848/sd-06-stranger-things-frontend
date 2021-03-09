@@ -108,6 +108,7 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
+    console.log(process.env.DEVELOPMENT);
     return (
       <div
         className={ `reality ${getRealityClass(
@@ -121,7 +122,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          {(process.env.DEVELOPMENT) ? <div>Em desenvolvimento</div> : null}
           <div>
             <input
               placeholder="Nome do Personagem"
