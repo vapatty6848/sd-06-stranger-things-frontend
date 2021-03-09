@@ -119,7 +119,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          { (process.env.DEVELOPMENT_MODE === 'true') ? <dir>Em desenvolvimento</dir> : <dir>AAAAAAAAAAAAAAa</dir> }
           <div>
             <input
               placeholder="Nome do Personagem"
