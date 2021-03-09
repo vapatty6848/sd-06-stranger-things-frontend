@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-03-09T02:06:21.630Z",
+    "end": "2021-03-09T02:06:21.695Z",
+    "duration": 65,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "adb0ff11-3574-49b8-a766-d1e1499a0cfa",
+      "title": "",
+      "fullFile": "cypress/integration/VerifyEnv.spec.js",
+      "file": "cypress/integration/VerifyEnv.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6b9f9c4-34ce-4703-a7b7-99d35ea581c2",
+          "title": "Verifica as variáveis de ambiente do frontend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado se as variáveis do hawkins existem",
+              "fullTitle": "Verifica as variáveis de ambiente do frontend Será validado se as variáveis do hawkins existem",
+              "timedOut": null,
+              "duration": 30,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "expect(Cypress.env(REACT_APP_HAWKINS_URL)).to.exist;\nexpect(Cypress.env(REACT_APP_HAWKINS_TIMEOUT)).to.exist;",
+              "err": {
+                "message": "AssertionError: expected undefined to exist",
+                "estack": "AssertionError: expected undefined to exist\n    at Context.eval (http://localhost:34357/__cypress/tests?p=cypress/integration/VerifyEnv.spec.js:105:50)",
+                "diff": null
+              },
+              "uuid": "0cd1f0fb-4c12-43b5-822c-a8af62e6fedd",
+              "parentUUID": "e6b9f9c4-34ce-4703-a7b7-99d35ea581c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado se as variáveis do upsidesown existem",
+              "fullTitle": "Verifica as variáveis de ambiente do frontend Será validado se as variáveis do upsidesown existem",
+              "timedOut": null,
+              "duration": 9,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "expect(Cypress.env(REACT_APP_UPSIDEDOWN_URL)).to.exist;\nexpect(Cypress.env(REACT_APP_UPSIDEDOWN_TIMEOUT)).to.exist;",
+              "err": {
+                "message": "AssertionError: expected undefined to exist",
+                "estack": "AssertionError: expected undefined to exist\n    at Context.eval (http://localhost:34357/__cypress/tests?p=cypress/integration/VerifyEnv.spec.js:109:53)",
+                "diff": null
+              },
+              "uuid": "715bb381-cedb-4ddb-b110-2ba6b59196e4",
+              "parentUUID": "e6b9f9c4-34ce-4703-a7b7-99d35ea581c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0cd1f0fb-4c12-43b5-822c-a8af62e6fedd",
+            "715bb381-cedb-4ddb-b110-2ba6b59196e4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
