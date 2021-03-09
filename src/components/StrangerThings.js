@@ -17,6 +17,8 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT || TIMEOUT,
 };
 
+const isDevelopmentMode = process.env.REACT_APP_DEVELOPMENT;
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -122,7 +124,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          {(process.env.DEVELOPMENT) ? <div>Em desenvolvimento</div> : null}
+          {(isDevelopmentMode) && <div>Em desenvolvimento</div>}
           <div>
             <input
               placeholder="Nome do Personagem"
