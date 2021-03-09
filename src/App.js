@@ -3,6 +3,8 @@ import './App.css';
 
 import StrangerThings from './components/StrangerThings';
 
+require('dotenv').config();
+
 // para pushar
 function App() {
   return (
