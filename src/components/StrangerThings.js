@@ -46,9 +46,10 @@ class StrangerThings extends React.Component {
   }
 
   changeRealityClick() {
-    const { hereIsTheUpsideDownWorld } = this.state;
+    const { UPSIDEDOWN_MODE } = process.env;
+    // const { hereIsTheUpsideDownWorld } = this.state;
     this.setState({
-      hereIsTheUpsideDownWorld: !hereIsTheUpsideDownWorld,
+      UPSIDEDOWN_MODE: !UPSIDEDOWN_MODE,
       characters: [],
     });
   }
