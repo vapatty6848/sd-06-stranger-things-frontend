@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+
 require('dotenv').config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -121,7 +122,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          { (devMode) && <h1>Em desenvolvimento</h1> }
+          { devMode && <h1>Em desenvolvimento</h1> }
           <div>
             <input
               placeholder="Nome do Personagem"
