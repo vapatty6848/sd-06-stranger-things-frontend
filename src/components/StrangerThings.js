@@ -115,6 +115,9 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          {
+            (process.env.DEVELOPMENT) ? <p>Em desenvolvimento</p> : <p />
+          }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
@@ -163,9 +166,6 @@ class StrangerThings extends React.Component {
             <button type="button" onClick={ this.nextPage }>Próximo</button>
           </div>
         </div>
-        {
-          (process.env.DEVELOPMENT) ? <p>Em desenvolvimento</p> : <p />
-        }
       </div>
     );
   }
