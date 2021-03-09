@@ -15,7 +15,7 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
-const DEV_MODE = (process.env.DEVELOPER_MODE === 'true');
+const DEV_MODE = (process.env.REACT_APP_DEVELOPER_MODE === 'true');
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
