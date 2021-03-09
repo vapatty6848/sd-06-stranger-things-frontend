@@ -1,6 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
-
+// Get env vars
 require('dotenv/config');
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
