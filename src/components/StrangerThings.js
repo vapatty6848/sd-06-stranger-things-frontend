@@ -112,8 +112,6 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        {console.log('strangerThingsConfig', strangerThingsConfig)}
-        {console.log('upsideDownConfig', upsideDownConfig)}
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
