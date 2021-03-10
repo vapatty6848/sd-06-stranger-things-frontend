@@ -10,14 +10,10 @@ const strangerThingsConfig = {
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
-console.log('strangerThingsConfig', strangerThingsConfig);
-
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDEDOWN_URL,
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
-
-console.log('upsideDownConfig', upsideDownConfig);
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
@@ -116,6 +112,8 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        {console.log('strangerThingsConfig', strangerThingsConfig)}
+        {console.log('upsideDownConfig', upsideDownConfig)}
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
