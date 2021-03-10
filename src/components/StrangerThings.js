@@ -1,17 +1,19 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  url: 'https://rods27-bk.herokuapp.com/',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  url: 'https://rods27-bd.herokuapp.com/',
   timeout: 30000,
 };
 
@@ -103,6 +105,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(process.env)
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
