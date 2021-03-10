@@ -8,12 +8,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'https://rods27-bk.herokuapp.com/',
+  url: 'https://rods27-bk.herokuapp.com',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'https://rods27-bd.herokuapp.com/',
+  url: 'https://rods27-bd.herokuapp.com',
   timeout: 30000,
 };
 
