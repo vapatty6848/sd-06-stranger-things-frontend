@@ -106,6 +106,7 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log(process.env.REACT_APP_DEV === 'true');
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
@@ -122,7 +123,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          {<h3> em desenvolvimento </h3> && process.env.REACT_APP_DEV === 'true'}
+          {process.env.REACT_APP_DEV === 'true' ? <h3 className="white"> em desenvolvimento </h3> : null }
 
           <div>
             <input

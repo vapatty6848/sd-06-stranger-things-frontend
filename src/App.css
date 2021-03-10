@@ -99,3 +99,8 @@
   width: 900px;
   text-align: left;
 }
+
+.white {
+  color:rgba(211, 211, 211, 0.907);
+  background-color: black;
+}
