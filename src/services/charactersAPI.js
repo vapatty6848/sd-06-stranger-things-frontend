@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const {REACT_APP_HAWKINS_URL} = process.env;
+const { REACT_APP_HAWKINS_URL } = process.env;
 
 const DEFAULT_TIMEOUT = 30000;
 const DEFAULT_URL = REACT_APP_HAWKINS_URL;
