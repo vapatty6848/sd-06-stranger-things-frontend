@@ -2,7 +2,8 @@ import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
-const { REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT, 
+
+const { REACT_APP_HAWKINS_URL, REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL, REACT_APP_UPSIDEDOWN_TIMEOUT } = process.env;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -16,7 +17,7 @@ const strangerThingsConfig = {
 };
 
 const upsideDownConfig = {
-  url:REACT_APP_UPSIDEDOWN_URL,
+  url: REACT_APP_UPSIDEDOWN_URL,
   // url: 'http://localhost:3003',
   timeout: REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
@@ -70,16 +71,16 @@ class StrangerThings extends React.Component {
 
   searchCharacter(pages) {
     const { characterName, hereIsTheUpsideDownWorld, page } = this.state;
-   
+
     const service = hereIsTheUpsideDownWorld
       ? charactersUpsideDownService
       : charactersService;
 
-      console.log('É ', hereIsTheUpsideDownWorld)
-      console.log('caso true: charactersUpsideDownService')
-      console.log('caso falso: charactersService')
-      console.log('character name:',characterName)
-      console.log('paginas:',pages)
+    console.log('É ', hereIsTheUpsideDownWorld);
+    console.log('caso true: charactersUpsideDownService');
+    console.log('caso falso: charactersService');
+    console.log('character name:', characterName);
+    console.log('paginas:', pages);
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
