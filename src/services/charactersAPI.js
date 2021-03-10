@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const {REACT_APP_HAWKINS_URL} = process.env;
+
 const DEFAULT_TIMEOUT = 30000;
-const DEFAULT_URL = process.env.REACT_APP_HAWKINS_URL;
+const DEFAULT_URL = REACT_APP_HAWKINS_URL;
 
 class CharactersService {
   constructor({ url = DEFAULT_URL, timeout = DEFAULT_TIMEOUT }) {
