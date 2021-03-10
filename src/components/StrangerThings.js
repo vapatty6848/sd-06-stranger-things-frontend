@@ -74,11 +74,6 @@ class StrangerThings extends React.Component {
       ? charactersUpsideDownService
       : charactersService;
 
-    console.log('É ', hereIsTheUpsideDownWorld);
-    console.log('caso true: charactersUpsideDownService');
-    console.log('caso falso: charactersService');
-    console.log('character name:', characterName);
-    console.log('paginas:', pages);
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
