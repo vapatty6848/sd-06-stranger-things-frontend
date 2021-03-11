@@ -8,9 +8,8 @@ require('dotenv').config();
 function App() {
   return (
     <div className="App">
-      {process.env.REACT_APP_ENV === 'development'
-        ? <h2>Em desenvolvimento</h2>
-        : <StrangerThings />}
+      {process.env.REACT_APP_ENV === 'development' && <h2>Em desenvolvimento</h2>}
+      <StrangerThings />
     </div>
   );
 }
