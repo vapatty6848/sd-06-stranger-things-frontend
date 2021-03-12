@@ -5,7 +5,8 @@ require('dotenv').config();
 
 const {
   REACT_APP_HAWKINS_URL,
-  REACT_APP_UPSIDEDOWN_URL
+  REACT_APP_UPSIDEDOWN_URL,
+  REACT_APP_DEVELOPMENT,
 } = process.env;
 
 const timeout = 30000;
@@ -123,6 +124,7 @@ class StrangerThings extends React.Component {
       >
         <div className="content strangerfy">
           <div className="change-reality">
+            <p>{REACT_APP_DEVELOPMENT === 'true' && 'Em desenvolvimento'}</p>
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
