@@ -107,7 +107,7 @@ class StrangerThings extends React.Component {
 
   render() {
     const { hereIsTheUpsideDownWorld, characterName, characters, page } = this.state;
-    console.log(process.env.REACT_APP_DEVELOPMENT);
+
     return (
       <div className={ `reality ${getRealityClass(hereIsTheUpsideDownWorld)}` }>
         <div className="content strangerfy">
@@ -119,9 +119,7 @@ class StrangerThings extends React.Component {
           </div>
           {process.env.REACT_APP_DEVELOPMENT === 'true' ? (
             <h1>Em desenvolvimento</h1>
-          ) : (
-            <h1>Em produção</h1>
-          )}
+          ) : null}
           <div>
             <input
               placeholder="Nome do Personagem"
