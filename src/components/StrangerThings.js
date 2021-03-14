@@ -116,7 +116,9 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
+          {process.env.REACT_APP_DEVELOPMENT === 'true' ? (
+            <p>Em desenvolvimento</p>
+          ) : null}
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -148,7 +150,6 @@ class StrangerThings extends React.Component {
               </tbody>
             </table>
           </div>
-
           <div>
             <p>
               Página atual:
