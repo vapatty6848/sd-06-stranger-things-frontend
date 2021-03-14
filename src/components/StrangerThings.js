@@ -117,8 +117,10 @@ class StrangerThings extends React.Component {
             </button>
           </div>
           {process.env.REACT_APP_DEVELOPMENT === 'true' ? (
-            <p>Em desenvolvimento</p>
-          ) : null}
+            <h1>Em desenvolvimento</h1>
+          ) : (
+            <h1>Em produção</h1>
+          )}
           <div>
             <input
               placeholder="Nome do Personagem"
