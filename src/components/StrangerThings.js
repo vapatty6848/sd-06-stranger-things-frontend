@@ -1,18 +1,21 @@
-import React from 'react';
-import CharactersService from '../services/charactersAPI';
+import React from "react";
+import CharactersService from "../services/charactersAPI";
 
-const getRealityClass = (hereIsTheUpsideDownWorld) => (
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
-);
+const getRealityClass = (hereIsTheUpsideDownWorld) =>
+  hereIsTheUpsideDownWorld ? "upside-down" : "stranger-things";
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url:
+    process.env.REACT_APP_HAWKINS_URL ||
+    "https://darthurmoura-bk.herokuapp.com/",
+  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url:
+    process.env.REACT_APP_UPSIDEDOWN_URL ||
+    "https://darthurmoura-bd.herokuapp.com/",
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -24,9 +27,9 @@ class StrangerThings extends React.Component {
 
     this.state = {
       hereIsTheUpsideDownWorld: false,
-      characterName: '',
+      characterName: "",
       characters: [],
-      page: 1,
+      page: 1
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -41,7 +44,7 @@ class StrangerThings extends React.Component {
 
   handleInput(event) {
     this.setState({
-      characterName: event.target.value,
+      characterName: event.target.value
     });
   }
 
@@ -49,16 +52,16 @@ class StrangerThings extends React.Component {
     const { hereIsTheUpsideDownWorld } = this.state;
     this.setState({
       hereIsTheUpsideDownWorld: !hereIsTheUpsideDownWorld,
-      characters: [],
+      characters: []
     });
   }
 
   searchClick() {
     this.setState(
       {
-        page: 1,
+        page: 1
       },
-      this.searchCharacter(1),
+      this.searchCharacter(1)
     );
   }
 
@@ -73,7 +76,7 @@ class StrangerThings extends React.Component {
       .getCharacters(characterName, pages || page, numberOfPages)
       .then(({ data: characters }) => {
         this.setState({
-          characters,
+          characters
         });
       });
   }
@@ -84,9 +87,9 @@ class StrangerThings extends React.Component {
     if (!characters.length) return;
     this.setState(
       {
-        page: page + 1,
+        page: page + 1
       },
-      () => this.searchCharacter(),
+      () => this.searchCharacter()
     );
   }
 
@@ -96,26 +99,25 @@ class StrangerThings extends React.Component {
 
     this.setState(
       {
-        page: page - 1,
+        page: page - 1
       },
-      () => this.searchCharacter(),
+      () => this.searchCharacter()
     );
   }
 
   render() {
     const {
-      hereIsTheUpsideDownWorld, characterName, characters, page,
+      hereIsTheUpsideDownWorld,
+      characterName,
+      characters,
+      page
     } = this.state;
     return (
-      <div
-        className={ `reality ${getRealityClass(
-          hereIsTheUpsideDownWorld,
-        )}` }
-      >
+      <div className={`reality ${getRealityClass(hereIsTheUpsideDownWorld)}`}>
         <div className="content strangerfy">
           <div className="change-reality">
-            <button type="button" onClick={ this.changeRealityClick }>
-              {' '}
+            <button type="button" onClick={this.changeRealityClick}>
+              {" "}
               Mudar de Realidade
             </button>
           </div>
@@ -123,10 +125,12 @@ class StrangerThings extends React.Component {
           <div>
             <input
               placeholder="Nome do Personagem"
-              onChange={ this.handleInput }
-              value={ characterName }
+              onChange={this.handleInput}
+              value={characterName}
             />
-            <button type="button" onClick={ this.searchClick }>Pesquisar</button>
+            <button type="button" onClick={this.searchClick}>
+              Pesquisar
+            </button>
           </div>
 
           <div>
@@ -140,7 +144,7 @@ class StrangerThings extends React.Component {
               </thead>
               <tbody>
                 {characters.map((char) => (
-                  <tr key={ char.name }>
+                  <tr key={char.name}>
                     <td>{char.name}</td>
                     <td>{char.origin}</td>
                     <td>{char.status}</td>
@@ -157,8 +161,12 @@ class StrangerThings extends React.Component {
             </p>
           </div>
           <div>
-            <button type="button" onClick={ this.previousPage }>Anterior</button>
-            <button type="button" onClick={ this.nextPage }>Próximo</button>
+            <button type="button" onClick={this.previousPage}>
+              Anterior
+            </button>
+            <button type="button" onClick={this.nextPage}>
+              Próximo
+            </button>
           </div>
         </div>
       </div>
