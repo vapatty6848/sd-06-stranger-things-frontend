@@ -21,6 +21,8 @@ const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
 const developmentMode = process.env.REACT_APP_DEVELOPMENT === 'true';
+console.log('Env var: ', process.env.REACT_APP_DEVELOPMENT );
+console.log('Dev mode: ', developmentMode);
 
 class StrangerThings extends React.Component {
   constructor(props) {
