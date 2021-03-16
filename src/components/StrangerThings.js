@@ -1,5 +1,6 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
+
 require('dotenv').config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -106,7 +107,6 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    console.log(inDevelopment)
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
