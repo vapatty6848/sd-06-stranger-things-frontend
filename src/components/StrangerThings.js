@@ -11,14 +11,14 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 const strangerThingsConfig = {
   url:
     process.env.REACT_APP_HAWKINS_URL
-    || 'https://darthurmoura-bk.herokuapp.com/',
+    || 'http://localhost:3002/',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
 const upsideDownConfig = {
   url:
     process.env.REACT_APP_UPSIDEDOWN_URL
-    || 'https://darthurmoura-bd.herokuapp.com/',
+    || 'http://localhost:3003/',
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
