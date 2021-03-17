@@ -1,7 +1,7 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
-require('dotenv/config');
+require('dotenv').config();
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -17,6 +17,9 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
+const development = process.env.REACT_APP_DEVELOPMENT_TAG === 'true';
+console.log(process.env.REACT_APP_DEVELOPMENT_TAG);
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -26,7 +29,6 @@ class StrangerThings extends React.Component {
 
     this.state = {
       hereIsTheUpsideDownWorld: false,
-      development: process.env.REACT_APP_DEVELOPMENTTAG === 'true',
       characterName: '',
       characters: [],
       page: 1,
@@ -107,7 +109,7 @@ class StrangerThings extends React.Component {
 
   render() {
     const {
-      hereIsTheUpsideDownWorld, characterName, characters, page, development,
+      hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
     return (
       <div
@@ -115,7 +117,6 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        { development && <span>Em desenvolvimento</span> }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
@@ -125,6 +126,8 @@ class StrangerThings extends React.Component {
           </div>
 
           <div>
+            {/* {console.log(development, 'aqui')} */}
+            { development && <span>Em desenvolvimento</span>}
             <input
               placeholder="Nome do Personagem"
               onChange={ this.handleInput }
