@@ -26,7 +26,7 @@ class StrangerThings extends React.Component {
 
     this.state = {
       hereIsTheUpsideDownWorld: false,
-      development: process.env.REACT_APP_DEVELOPMENTTAG,
+      development: process.env.REACT_APP_DEVELOPMENTTAG === 'true',
       characterName: '',
       characters: [],
       page: 1,
