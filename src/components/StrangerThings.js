@@ -6,7 +6,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
+  url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3003',
   timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
 };
 
