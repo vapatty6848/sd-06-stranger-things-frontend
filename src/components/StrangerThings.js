@@ -13,8 +13,8 @@ const strangerThingsConfig = {
 };
 
 const upsideDownConfig = {
-  url: process.env.REACT_APP_HAWKINS_URL,
-  timeout: process.env.REACT_APP_HAWKINS_TIMEOUT,
+  url: process.env.REACT_APP_UPSIDEDOWN_URL,
+  timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -141,6 +141,9 @@ class StrangerThings extends React.Component {
                 </tr>
               </thead>
               <tbody>
+                {console.log(characters)}
+                {console.log(process.env.REACT_APP_HAWKINS_URL)}
+                {console.log(process.env.REACT_APP_UPSIDEDOWN_URL)}
                 {characters.map((char) => (
                   <tr key={ char.name }>
                     <td>{char.name}</td>
