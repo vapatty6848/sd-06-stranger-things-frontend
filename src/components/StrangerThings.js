@@ -4,7 +4,7 @@ import CharactersService from '../services/charactersAPI';
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
-
+// From whom the bell tolls
 const strangerThingsConfig = {
   url: 'http://localhost:3002',
   timeout: 30000,
