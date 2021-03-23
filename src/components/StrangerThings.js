@@ -115,7 +115,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <h1 className="development-flag">
-          {REACT_APP_DEVELOPER_MODE === 'true' && 'Em desenvolvimento'}
+          {process.env.REACT_APP_DEVELOPER_MODE === 'true' && 'Em desenvolvimento'}
         </h1>
         <div className="content strangerfy">
           <div className="change-reality">
