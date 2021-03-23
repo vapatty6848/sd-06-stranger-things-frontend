@@ -114,10 +114,11 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        <h1 className="development-flag">
-          {process.env.REACT_APP_DEVELOPER_MODE === true && 'Em desenvolvimento'}
-        </h1>
         <div className="content strangerfy">
+          <h1 className="development-flag">
+            {process.env.REACT_APP_DEVELOPER_MODE === 'true' && 'Em desenvolvimento'}
+            {console.log(process.env.REACT_APP_DEVELOPER_MODE)}
+          </h1>
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
