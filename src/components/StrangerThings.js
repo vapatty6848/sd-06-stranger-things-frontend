@@ -141,9 +141,6 @@ class StrangerThings extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {console.log(characters)}
-                {console.log(process.env.REACT_APP_HAWKINS_URL)}
-                {console.log(process.env.REACT_APP_UPSIDEDOWN_URL)}
                 {characters.map((char) => (
                   <tr key={ char.name }>
                     <td>{char.name}</td>
