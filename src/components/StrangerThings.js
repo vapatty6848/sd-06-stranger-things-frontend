@@ -12,8 +12,13 @@ const {
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
-  DEVELOPMENT,
 } = process.env;
+
+console.log('DEVELOPMENT_MODE', process.env.DEVELOPMENT_MODE);
+console.log('GITHUB_USER', process.env.GITHUB_USER);
+console.log('QUALQUER', process.env.QUALQUER_NOME);
+console.log('REACT_APP_UPSIDEDOWN_URL', REACT_APP_HAWKINS_URL);
+console.log('REACT_APP_UPSIDEDOWN_TIMEOUT', REACT_APP_HAWKINS_TIMEOUT);
 
 const strangerThingsConfig = {
   url: REACT_APP_HAWKINS_URL,
@@ -37,6 +42,7 @@ class StrangerThings extends React.Component {
       characterName: '',
       characters: [],
       page: 1,
+      // dev: DEVELOPMENT_MODE,
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -124,7 +130,8 @@ class StrangerThings extends React.Component {
       >
         <div className="content strangerfy">
           <div className="change-reality">
-            { DEVELOPMENT && <p>Em desenvolvimento</p>}
+            {/* { DEVELOPMENT_MODE && <p>Em desenvolvimento</p> } */}
+            {/* <p>Em desenvolvimento</p> */}
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
