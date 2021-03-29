@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <p>
         {
-          Boolean(process.env.REACT_APP_DEV_MODE) === 'true' ? 'Em desenvolvimento' : null
+          process.env.REACT_APP_DEV_MODE === 'true' ? 'Em desenvolvimento' : null
         }
       </p>
       <StrangerThings />
