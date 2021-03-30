@@ -12,11 +12,14 @@ const {
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
+  REACT_APP_QUALQUER_NOME,
+  REACT_APP_DEVELOPMENT_MODE,
+  REACT_APP_GITHUB_USER,
 } = process.env;
 
-console.log('DEVELOPMENT_MODE', process.env.DEVELOPMENT_MODE);
-console.log('GITHUB_USER', process.env.GITHUB_USER);
-console.log('QUALQUER', process.env.QUALQUER_NOME);
+console.log('DEVELOPMENT_MODE', REACT_APP_DEVELOPMENT_MODE);
+console.log('GITHUB_USER', REACT_APP_GITHUB_USER);
+console.log('QUALQUER', REACT_APP_QUALQUER_NOME);
 console.log('REACT_APP_UPSIDEDOWN_URL', REACT_APP_HAWKINS_URL);
 console.log('REACT_APP_UPSIDEDOWN_TIMEOUT', REACT_APP_HAWKINS_TIMEOUT);
 
@@ -130,7 +133,7 @@ class StrangerThings extends React.Component {
       >
         <div className="content strangerfy">
           <div className="change-reality">
-            {/* { DEVELOPMENT_MODE && <p>Em desenvolvimento</p> } */}
+            { JSON.parse(REACT_APP_DEVELOPMENT_MODE) ? <p>Em desenvolvimento</p> : <div />}
             {/* <p>Em desenvolvimento</p> */}
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
