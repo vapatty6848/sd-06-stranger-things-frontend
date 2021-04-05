@@ -120,7 +120,9 @@ class StrangerThings extends React.Component {
               {' '}
               Mudar de Realidade
             </button>
-            { developmentEnvironment && <span>Em desenvolvimento</span> }
+            {
+              developmentEnvironment && <span>Em desenvolvimento</span>
+            }
           </div>
 
           <div>
