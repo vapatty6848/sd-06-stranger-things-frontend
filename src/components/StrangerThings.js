@@ -15,6 +15,8 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
+const developmentEnvironment = process.env.REACT_APP_DEVELOPMENT === 'true';
+
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
@@ -159,6 +161,9 @@ class StrangerThings extends React.Component {
           <div>
             <button type="button" onClick={ this.previousPage }>Anterior</button>
             <button type="button" onClick={ this.nextPage }>Próximo</button>
+            {
+              developmentEnvironment && <span>Em desenvolvimento</span>
+            }
           </div>
         </div>
       </div>
