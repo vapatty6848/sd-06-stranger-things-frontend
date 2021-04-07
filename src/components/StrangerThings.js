@@ -17,7 +17,7 @@ const upsideDownConfig = {
   timeout: process.env.REACT_APP_UPSIDEDOWN_TIMEOUT,
 };
 
-const devMode = process.env.REACT_APP_DEVELOPER_MODE === 'true';
+// const devMode = process.env.REACT_APP_DEVELOPER_MODE === 'true';
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
@@ -117,13 +117,15 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          <h1 className="development-flag">
+            {process.env.REACT_APP_DEVELOPER_MODE === 'true' && 'Em desenvolvimento'}
+          </h1>
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
             </button>
           </div>
-          { devMode && <h1>Em desenvolvimento</h1> }
           <div>
             <input
               placeholder="Nome do Personagem"
