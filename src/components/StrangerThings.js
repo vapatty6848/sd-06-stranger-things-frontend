@@ -52,7 +52,7 @@ class StrangerThings extends React.Component {
   changeRealityClick() {
     const { hereIsTheUpsideDownWorld } = this.state;
     this.setState({
-      hereIsTheUpsideDownWorld,
+      hereIsTheUpsideDownWorld: !hereIsTheUpsideDownWorld,
       characters: [],
     });
   }
@@ -118,7 +118,7 @@ class StrangerThings extends React.Component {
       >
         <div className="content strangerfy">
           <div className="change-reality">
-            <button type="button" onClick={ this.changeRealityClic }>
+            <button type="button" onClick={ this.changeRealityClick }>
               {' '}
               Mudar de Realidade
             </button>
