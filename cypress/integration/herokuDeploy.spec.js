@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+// / <reference types="Cypress" />
 
 const PESQUISAR = "Pesquisar";
 const MARTIN = "Martin";
@@ -18,7 +18,7 @@ describe("Verifica se foi feito o deploy do frontend no Heroku", () => {
     cy.contains(PESQUISAR).click();
     cy.contains(MARTIN).should("exist");
   });
-  
+
   it("Será validado que o botão de mudar de realidade funciona.", () => {
     cy.contains("Mudar de Realidade").click();
     cy.contains(PESQUISAR).click();

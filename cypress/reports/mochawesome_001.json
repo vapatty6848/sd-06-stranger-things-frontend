@@ -1,0 +1,90 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-09T15:12:47.204Z",
+    "end": "2021-04-09T15:12:47.357Z",
+    "duration": 153,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cd15a764-c847-47ef-9a2f-2ff30fe25649",
+      "title": "",
+      "fullFile": "cypress/integration/herokuDeploy.spec.js",
+      "file": "cypress/integration/herokuDeploy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 62,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > React is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > React is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object../cypress/integration/herokuDeploy.spec.js (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:100:1)\n    at __webpack_require__ (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:20:30)\n    at Object.0 (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:145:18)\n    at __webpack_require__ (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:20:30)\n    at eval (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:84:18)\n    at eval (http://localhost:49954/__cypress/tests?p=cypress/integration/herokuDeploy.spec.js:87:10)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "908fba42-c735-4700-b80c-c3224180b2ec",
+          "parentUUID": "cd15a764-c847-47ef-9a2f-2ff30fe25649",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "908fba42-c735-4700-b80c-c3224180b2ec"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 62,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
