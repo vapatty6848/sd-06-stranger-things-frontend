@@ -3,7 +3,7 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
-requestAnimationFrame('dotenv').config();
+// requestAnimationFrame('dotenv').config();
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -20,24 +20,19 @@ const upsideDownConfig = {
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
-
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       hereIsTheUpsideDownWorld: false,
       characterName: '',
       characters: [],
       page: 1,
     };
-
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
-
     this.searchClick = this.searchClick.bind(this);
     this.searchCharacter = this.searchCharacter.bind(this);
-
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
@@ -70,7 +65,6 @@ class StrangerThings extends React.Component {
     const service = hereIsTheUpsideDownWorld
       ? charactersUpsideDownService
       : charactersService;
-
     const numberOfPages = 10;
     service
       .getCharacters(characterName, pages || page, numberOfPages)
@@ -83,7 +77,6 @@ class StrangerThings extends React.Component {
 
   nextPage() {
     const { page, characters } = this.state;
-
     if (!characters.length) return;
     this.setState(
       {
@@ -96,7 +89,6 @@ class StrangerThings extends React.Component {
   previousPage() {
     const { page } = this.state;
     if (page <= 1) return;
-
     this.setState(
       {
         page: page - 1,
@@ -122,7 +114,6 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-
           <div>
             <input
               placeholder="Nome do Personagem"
@@ -131,7 +122,6 @@ class StrangerThings extends React.Component {
             />
             <button type="button" onClick={ this.searchClick }>Pesquisar</button>
           </div>
-
           <div>
             <table>
               <thead>
@@ -152,7 +142,6 @@ class StrangerThings extends React.Component {
               </tbody>
             </table>
           </div>
-
           <div>
             <p>
               Página atual:
@@ -168,5 +157,4 @@ class StrangerThings extends React.Component {
     );
   }
 }
-
 export default StrangerThings;
