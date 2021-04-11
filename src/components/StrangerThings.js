@@ -3,7 +3,6 @@ import CharactersService from '../services/charactersAPI';
 
 require('dotenv').config();
 
-// requestAnimationFrame('dotenv').config();
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
