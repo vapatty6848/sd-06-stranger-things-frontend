@@ -1,3 +1,5 @@
+// vai avaliar sim
+
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
@@ -114,6 +116,9 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        <div>
+          <p>Em desenvolvimento</p>
+        </div>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
