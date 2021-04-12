@@ -1,4 +1,4 @@
-// vai avaliar sim
+// vai avaliar sim,  forçado
 
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
