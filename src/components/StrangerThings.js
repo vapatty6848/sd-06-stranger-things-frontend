@@ -102,7 +102,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
-
+  // Development
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
