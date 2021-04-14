@@ -156,7 +156,7 @@ class StrangerThings extends React.Component {
 
           <div>
             <p>
-              Em Desenvolvimento
+              Página atual:
               {page}
             </p>
           </div>
