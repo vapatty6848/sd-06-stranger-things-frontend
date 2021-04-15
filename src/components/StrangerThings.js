@@ -1,6 +1,8 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
 
+require('dotenv').config();
+
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
@@ -149,7 +151,11 @@ class StrangerThings extends React.Component {
               </tbody>
             </table>
           </div>
-
+          <div>
+            <p>
+              Em desenvolvimento
+            </p>
+          </div>
           <div>
             <p>
               Página atual:
