@@ -116,7 +116,7 @@ class StrangerThings extends React.Component {
           <div className="change-reality">
             <p>
               {
-                process.env.REACT_APP_DEVELOPMENT_TAG === 'true' ? 'Em desenvolvimento' : null
+                process.env.REACT_APP_DEV === 'true' ? 'Em desenvolvimento' : null
               }
             </p>
             <button type="button" onClick={ this.changeRealityClick }>
