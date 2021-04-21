@@ -35,11 +35,13 @@ class StrangerThings extends React.Component {
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
+
   handleInput(event) {
     this.setState({
       characterName: event.target.value,
     });
   }
+
   changeRealityClick() {
     const { hereIsTheUpsideDownWorld } = this.state;
     this.setState({
@@ -47,6 +49,7 @@ class StrangerThings extends React.Component {
       characters: [],
     });
   }
+
   searchClick() {
     this.setState(
       {
@@ -55,6 +58,7 @@ class StrangerThings extends React.Component {
       this.searchCharacter(1),
     );
   }
+
   searchCharacter(pages) {
     const { characterName, hereIsTheUpsideDownWorld, page } = this.state;
     const service = hereIsTheUpsideDownWorld
@@ -69,6 +73,7 @@ class StrangerThings extends React.Component {
         });
       });
   }
+
   nextPage() {
     const { page, characters } = this.state;
     if (!characters.length) return;
@@ -79,6 +84,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
+
   previousPage() {
     const { page } = this.state;
     if (page <= 1) return;
@@ -89,6 +95,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
