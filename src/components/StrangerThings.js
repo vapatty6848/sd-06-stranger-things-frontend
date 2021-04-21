@@ -115,8 +115,10 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          <h1 className="development-flag">
+            {process.env.REACT_APP_DEVELOPER_MODE === 'true' && 'Em desenvolvimento'}
+          </h1>
           <div className="change-reality">
-            {process.env.REACT_APP_ENV === 'true' ? 'Em desenvolvimento' : ''}
             <button type="button" onClick={ this.changeRealityClick }>
               Mudar de Realidade
             </button>
