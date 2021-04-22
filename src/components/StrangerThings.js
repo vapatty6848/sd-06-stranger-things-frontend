@@ -102,7 +102,7 @@ class StrangerThings extends React.Component {
       () => this.searchCharacter(),
     );
   }
-
+  // comentário
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -113,7 +113,6 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
-        <span>Em desenvolvimento</span>
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
