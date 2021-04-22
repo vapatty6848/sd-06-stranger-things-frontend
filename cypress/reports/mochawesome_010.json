@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-22T13:46:07.442Z",
+    "end": "2021-04-22T13:46:17.430Z",
+    "duration": 9988,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb91bb76-593b-4067-a074-d1cd2c7e2352",
+      "title": "",
+      "fullFile": "cypress/integration/herokuDeploy.spec.js",
+      "file": "cypress/integration/herokuDeploy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b12d0b77-b2c4-4b1f-90ac-2864d3e5a39f",
+          "title": "Verifica se foi feito o deploy do frontend no Heroku",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado que o botão de mudar de realidade existe",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade existe",
+              "timedOut": null,
+              "duration": 6294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".change-reality\").should(\"exist\");",
+              "err": {},
+              "uuid": "ebd7c525-18d4-4edd-a04b-c266aed34bd7",
+              "parentUUID": "b12d0b77-b2c4-4b1f-90ac-2864d3e5a39f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que a pesquisa funciona como deveria",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que a pesquisa funciona como deveria",
+              "timedOut": null,
+              "duration": 918,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "b9b22169-12d6-474a-9c8a-a290765e8213",
+              "parentUUID": "b12d0b77-b2c4-4b1f-90ac-2864d3e5a39f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que o botão de mudar de realidade funciona.",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que o botão de mudar de realidade funciona.",
+              "timedOut": null,
+              "duration": 1039,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(\"Mudar de Realidade\").click();\ncy.contains(PESQUISAR).click();\ncy.contains(INVERTED_MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "224ec1ad-e0d4-43a7-87eb-2b48dcdff5c7",
+              "parentUUID": "b12d0b77-b2c4-4b1f-90ac-2864d3e5a39f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado que os botões de próxima página e página anterior funcionam",
+              "fullTitle": "Verifica se foi feito o deploy do frontend no Heroku Será validado que os botões de próxima página e página anterior funcionam",
+              "timedOut": null,
+              "duration": 843,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(PESQUISAR).click();\ncy.contains(MARTIN).should(\"exist\");\ncy.contains(\"Próximo\").click();\ncy.contains(\"2\").should(\"exist\");\ncy.contains(Claudia).should(\"exist\");\ncy.contains(\"Anterior\").click();\ncy.contains(\"1\").should(\"exist\");\ncy.contains(MARTIN).should(\"exist\");",
+              "err": {},
+              "uuid": "c989c17d-e935-49ff-b8a2-972bcee867b5",
+              "parentUUID": "b12d0b77-b2c4-4b1f-90ac-2864d3e5a39f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebd7c525-18d4-4edd-a04b-c266aed34bd7",
+            "b9b22169-12d6-474a-9c8a-a290765e8213",
+            "224ec1ad-e0d4-43a7-87eb-2b48dcdff5c7",
+            "c989c17d-e935-49ff-b8a2-972bcee867b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9094,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
